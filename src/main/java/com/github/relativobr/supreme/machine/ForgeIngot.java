@@ -26,79 +26,79 @@ public class ForgeIngot extends SimpleItemWithLargeContainerMachine {
       Material.BLAST_FURNACE, "&bForge Ingot", "", "&fThis machine allows you to", "&fforge ingot resources.", "",
       LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(1),
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_FORGE_INGOT_MACHINE = new ItemStack[]{SupremeComponents.RUSTLESS_MACHINE,
-      new ItemStack(Material.BLAST_FURNACE), SupremeComponents.RUSTLESS_MACHINE, SupremeComponents.INDUCTIVE_MACHINE,
-      SupremeComponents.PETRIFIER_MACHINE, SupremeComponents.INDUCTIVE_MACHINE, SlimefunItems.ELECTRIC_INGOT_FACTORY_3,
-      SlimefunItems.ELECTRIC_SMELTERY_2, SlimefunItems.CARBON_PRESS_3};
+  public static final ItemStack[] RECIPE_FORGE_INGOT_MACHINE = new ItemStack[]{SupremeComponents.RUSTLESS_MACHINE.asQuantity(1),
+      new ItemStack(Material.BLAST_FURNACE), SupremeComponents.RUSTLESS_MACHINE.asQuantity(1), SupremeComponents.INDUCTIVE_MACHINE.asQuantity(1),
+      SupremeComponents.PETRIFIER_MACHINE.asQuantity(1), SupremeComponents.INDUCTIVE_MACHINE.asQuantity(1), SlimefunItems.ELECTRIC_INGOT_FACTORY_3.asQuantity(1),
+      SlimefunItems.ELECTRIC_SMELTERY_2.asQuantity(1), SlimefunItems.CARBON_PRESS_3.asQuantity(1)};
 
   public static final SlimefunItemStack FORGE_INGOT_MACHINE_II = new SupremeItemStack("SUPREME_FORGE_INGOT_II",
       Material.BLAST_FURNACE, "&bForge Ingot II", "", "&fThis machine allows you to", "&fforge ingot resources.", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(5),
       LoreBuilder.powerBuffer(5000), LoreBuilder.powerPerSecond(100), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_FORGE_INGOT_MACHINE_II = new ItemStack[]{SupremeComponents.CONVEYANCE_MACHINE,
-      SupremeCetrus.CETRUS_IGNIS, SupremeComponents.CONVEYANCE_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
-      ForgeIngot.FORGE_INGOT_MACHINE, SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.THORNERITE,
-      SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.THORNERITE};
+  public static final ItemStack[] RECIPE_FORGE_INGOT_MACHINE_II = new ItemStack[]{SupremeComponents.CONVEYANCE_MACHINE.asQuantity(1),
+      SupremeCetrus.CETRUS_IGNIS.asQuantity(1), SupremeComponents.CONVEYANCE_MACHINE.asQuantity(1), SupremeComponents.INDUCTOR_MACHINE.asQuantity(1),
+      ForgeIngot.FORGE_INGOT_MACHINE.asQuantity(1), SupremeComponents.INDUCTOR_MACHINE.asQuantity(1), SupremeComponents.THORNERITE.asQuantity(1),
+      SupremeCetrus.CETRUS_LUMIUM.asQuantity(1), SupremeComponents.THORNERITE.asQuantity(1)};
 
   public static final SlimefunItemStack FORGE_INGOT_MACHINE_III = new SupremeItemStack("SUPREME_FORGE_INGOT_III",
       Material.BLAST_FURNACE, "&bForge Ingot III", "", "&fThis machine allows you to", "&fforge ingot resources.", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(15),
       LoreBuilder.powerBuffer(15000), LoreBuilder.powerPerSecond(300), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_FORGE_INGOT_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,
-      SupremeAttribute.getBomb(), SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
-      ForgeIngot.FORGE_INGOT_MACHINE_II, SupremeComponents.SUPREME, SupremeComponents.CRYSTALLIZER_MACHINE,
-      SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
+  public static final ItemStack[] RECIPE_FORGE_INGOT_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE.asQuantity(1),
+      SupremeAttribute.getBomb().asQuantity(1), SupremeComponents.THORNERITE.asQuantity(1), SupremeComponents.SUPREME.asQuantity(1),
+      ForgeIngot.FORGE_INGOT_MACHINE_II, SupremeComponents.SUPREME.asQuantity(1), SupremeComponents.CRYSTALLIZER_MACHINE.asQuantity(1),
+      SupremeCetrus.CETRUS_LUMIUM.asQuantity(1), SupremeComponents.CRYSTALLIZER_MACHINE.asQuantity(1)};
 
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_LEAD = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.LEAD_DUST, 32), new SlimefunItemStack(SlimefunItems.LEAD_INGOT, 32));
+      SlimefunItems.LEAD_DUST.asQuantity(32), SlimefunItems.LEAD_INGOT.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_ALUMINUM = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.ALUMINUM_DUST, 32), new SlimefunItemStack(SlimefunItems.ALUMINUM_INGOT, 32));
+      SlimefunItems.ALUMINUM_DUST.asQuantity(32), SlimefunItems.ALUMINUM_INGOT.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_SILVER = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.SILVER_DUST, 32), new SlimefunItemStack(SlimefunItems.SILVER_INGOT, 32));
+      SlimefunItems.SILVER_DUST.asQuantity(32), SlimefunItems.SILVER_INGOT.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_COPPER = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.COPPER_DUST, 32), new SlimefunItemStack(SlimefunItems.COPPER_INGOT, 32));
+      SlimefunItems.COPPER_DUST.asQuantity(32), SlimefunItems.COPPER_INGOT.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_MAGNESIUM = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.MAGNESIUM_DUST, 32),
-      new SlimefunItemStack(SlimefunItems.MAGNESIUM_INGOT, 32));
+      SlimefunItems.MAGNESIUM_DUST.asQuantity(32),
+      SlimefunItems.MAGNESIUM_INGOT.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_IRON = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.IRON_DUST, 32), new ItemStack(Material.IRON_INGOT, 32));
+      SlimefunItems.IRON_DUST.asQuantity(32), new ItemStack(Material.IRON_INGOT, 32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_TIN = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.TIN_DUST, 32), new SlimefunItemStack(SlimefunItems.TIN_INGOT, 32));
+      SlimefunItems.TIN_DUST.asQuantity(32), SlimefunItems.TIN_INGOT.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_ZINC = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.ZINC_DUST, 32), new SlimefunItemStack(SlimefunItems.ZINC_INGOT, 32));
+      SlimefunItems.ZINC_DUST.asQuantity(32), SlimefunItems.ZINC_INGOT.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_4K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_DUST, 32), new SlimefunItemStack(SlimefunItems.GOLD_4K, 32));
+      SlimefunItems.GOLD_DUST.asQuantity(32), SlimefunItems.GOLD_4K.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_6K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_4K, 32), new SlimefunItemStack(SlimefunItems.GOLD_6K, 32));
+      SlimefunItems.GOLD_4K.asQuantity(32), SlimefunItems.GOLD_6K.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_8K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_6K, 32), new SlimefunItemStack(SlimefunItems.GOLD_8K, 32));
+      SlimefunItems.GOLD_6K.asQuantity(32), SlimefunItems.GOLD_8K.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_10K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_8K, 32), new SlimefunItemStack(SlimefunItems.GOLD_10K, 30));
+      SlimefunItems.GOLD_8K.asQuantity(32), SlimefunItems.GOLD_10K.asQuantity(30));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_12K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_10K, 32), new SlimefunItemStack(SlimefunItems.GOLD_12K, 28));
+      SlimefunItems.GOLD_10K.asQuantity(32), SlimefunItems.GOLD_12K.asQuantity(28));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_14K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_12K, 32), new SlimefunItemStack(SlimefunItems.GOLD_14K, 26));
+      SlimefunItems.GOLD_12K.asQuantity(32), SlimefunItems.GOLD_14K.asQuantity(26));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_16K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_14K, 32), new SlimefunItemStack(SlimefunItems.GOLD_16K, 24));
+      SlimefunItems.GOLD_14K.asQuantity(32), SlimefunItems.GOLD_16K.asQuantity(24));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_18K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_16K, 32), new SlimefunItemStack(SlimefunItems.GOLD_18K, 22));
+      SlimefunItems.GOLD_16K.asQuantity(32), SlimefunItems.GOLD_18K.asQuantity(22));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_20K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_18K, 32), new SlimefunItemStack(SlimefunItems.GOLD_20K, 20));
+      SlimefunItems.GOLD_18K.asQuantity(32), SlimefunItems.GOLD_20K.asQuantity(20));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_22K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_20K, 32), new SlimefunItemStack(SlimefunItems.GOLD_22K, 18));
+      SlimefunItems.GOLD_20K.asQuantity(32), SlimefunItems.GOLD_22K.asQuantity(18));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_GOLD_24K = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.GOLD_22K, 32), new SlimefunItemStack(SlimefunItems.GOLD_24K, 16));
+      SlimefunItems.GOLD_22K.asQuantity(32), SlimefunItems.GOLD_24K.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_COBALT_INGOT = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.NICKEL_INGOT, 32), new SlimefunItemStack(SlimefunItems.COBALT_INGOT, 16));
+      SlimefunItems.NICKEL_INGOT.asQuantity(32), SlimefunItems.COBALT_INGOT.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_DAMASCUS_STEEL_INGOT = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.STEEL_INGOT, 32),
-      new SlimefunItemStack(SlimefunItems.DAMASCUS_STEEL_INGOT, 16));
+      SlimefunItems.STEEL_INGOT.asQuantity(32),
+      SlimefunItems.DAMASCUS_STEEL_INGOT.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_SILICON = new AbstractItemRecipe(
-      new ItemStack(Material.QUARTZ_BLOCK, 32), new SlimefunItemStack(SlimefunItems.SILICON, 32));
+      new ItemStack(Material.QUARTZ_BLOCK, 32), SlimefunItems.SILICON.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_FERROSILICON = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.SILICON, 32), new SlimefunItemStack(SlimefunItems.FERROSILICON, 16));
+      SlimefunItems.SILICON.asQuantity(32), SlimefunItems.FERROSILICON.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_INGOT_SULFATE = new AbstractItemRecipe(
-      new ItemStack(Material.NETHERRACK, 64), new SlimefunItemStack(SlimefunItems.SULFATE, 8));
+      new ItemStack(Material.NETHERRACK, 64), SlimefunItems.SULFATE.asQuantity(8));
 
   public ForgeIngot(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
     super(category, item, recipeType, recipe);

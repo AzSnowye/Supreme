@@ -46,30 +46,30 @@ public class GeneratorMob extends AbstractEnergyProvider {
       LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
       UtilEnergy.energyBuffer(getValueGeneratorsWithLimit(GeneratorMob.BASIC_GENERATOR_MOB_BUFFER)),
       UtilEnergy.energyPowerPerSecond(getValueGeneratorsWithLimit(GeneratorMob.BASIC_GENERATOR_MOB_ENERGY)));
-  public static final ItemStack[] RECIPE_GENERATOR_MOB_BASIC = new ItemStack[]{SlimefunItems.SMALL_CAPACITOR,
-      SlimefunItems.SILICON, SlimefunItems.SMALL_CAPACITOR, SlimefunItems.ALUMINUM_INGOT, SlimefunItems.ELECTRIC_MOTOR,
-      SlimefunItems.ALUMINUM_INGOT, SlimefunItems.SMALL_CAPACITOR, SlimefunItems.ALUMINUM_INGOT,
-      SlimefunItems.SMALL_CAPACITOR};
+  public static final ItemStack[] RECIPE_GENERATOR_MOB_BASIC = new ItemStack[]{SlimefunItems.SMALL_CAPACITOR.asQuantity(1),
+      SlimefunItems.SILICON.asQuantity(1), SlimefunItems.SMALL_CAPACITOR.asQuantity(1), SlimefunItems.ALUMINUM_INGOT.asQuantity(1), SlimefunItems.ELECTRIC_MOTOR.asQuantity(1),
+      SlimefunItems.ALUMINUM_INGOT.asQuantity(1), SlimefunItems.SMALL_CAPACITOR.asQuantity(1), SlimefunItems.ALUMINUM_INGOT.asQuantity(1),
+      SlimefunItems.SMALL_CAPACITOR.asQuantity(1)};
 
   public static final SlimefunItemStack GENERATOR_MOB_MEDIUM = new SupremeItemStack("SUPREME_GENERATOR_MOB_MEDIUM",
       Material.COMPOSTER, false,
       LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
       UtilEnergy.energyBuffer(getValueGeneratorsWithLimit(GeneratorMob.MEDIUM_GENERATOR_MOB_BUFFER)),
       UtilEnergy.energyPowerPerSecond(getValueGeneratorsWithLimit(GeneratorMob.MEDIUM_GENERATOR_MOB_ENERGY)));
-  public static final ItemStack[] RECIPE_GENERATOR_MOB_MEDIUM = new ItemStack[]{GeneratorMob.GENERATOR_MOB_BASIC,
-      SlimefunItems.FERROSILICON, GeneratorMob.GENERATOR_MOB_BASIC, SlimefunItems.REINFORCED_PLATE,
-      SupremeComponents.SYNTHETIC_RUBY, SlimefunItems.REINFORCED_PLATE, GeneratorMob.GENERATOR_MOB_BASIC,
-      SlimefunItems.ALUMINUM_BRONZE_INGOT, GeneratorMob.GENERATOR_MOB_BASIC};
+  public static final ItemStack[] RECIPE_GENERATOR_MOB_MEDIUM = new ItemStack[]{GeneratorMob.GENERATOR_MOB_BASIC.asQuantity(1),
+      SlimefunItems.FERROSILICON.asQuantity(1), GeneratorMob.GENERATOR_MOB_BASIC.asQuantity(1), SlimefunItems.REINFORCED_PLATE.asQuantity(1),
+      SupremeComponents.SYNTHETIC_RUBY.asQuantity(1), SlimefunItems.REINFORCED_PLATE.asQuantity(1), GeneratorMob.GENERATOR_MOB_BASIC.asQuantity(1),
+      SlimefunItems.ALUMINUM_BRONZE_INGOT.asQuantity(1), GeneratorMob.GENERATOR_MOB_BASIC.asQuantity(1)};
 
   public static final SlimefunItemStack GENERATOR_MOB_ADVANCED = new SupremeItemStack("SUPREME_GENERATOR_MOB_ADVANCED",
       Material.COMPOSTER, false,
       LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
       UtilEnergy.energyBuffer(getValueGeneratorsWithLimit(GeneratorMob.ADVANCED_GENERATOR_MOB_BUFFER)),
       UtilEnergy.energyPowerPerSecond(getValueGeneratorsWithLimit(GeneratorMob.ADVANCED_GENERATOR_MOB_ENERGY)));
-  public static final ItemStack[] RECIPE_GENERATOR_MOB_ADVANCED = new ItemStack[]{GeneratorMob.GENERATOR_MOB_MEDIUM,
-      SlimefunItems.CARBONADO, GeneratorMob.GENERATOR_MOB_MEDIUM, SlimefunItems.HEATING_COIL, SlimefunItems.PLUTONIUM,
-      SlimefunItems.HEATING_COIL, GeneratorMob.GENERATOR_MOB_MEDIUM, SupremeComponents.INDUCTIVE_MACHINE,
-      GeneratorMob.GENERATOR_MOB_MEDIUM};
+  public static final ItemStack[] RECIPE_GENERATOR_MOB_ADVANCED = new ItemStack[]{GeneratorMob.GENERATOR_MOB_MEDIUM.asQuantity(1),
+      SlimefunItems.CARBONADO.asQuantity(1), GeneratorMob.GENERATOR_MOB_MEDIUM.asQuantity(1), SlimefunItems.HEATING_COIL.asQuantity(1), SlimefunItems.PLUTONIUM.asQuantity(1),
+      SlimefunItems.HEATING_COIL.asQuantity(1), GeneratorMob.GENERATOR_MOB_MEDIUM.asQuantity(1), SupremeComponents.INDUCTIVE_MACHINE.asQuantity(1),
+      GeneratorMob.GENERATOR_MOB_MEDIUM.asQuantity(1)};
   protected static final Map<BlockPosition, UUID> cachedMob = new ConcurrentHashMap<>();
 
   private int energy;

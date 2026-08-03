@@ -12,44 +12,44 @@ public class SetupSupremeQuarry {
 
   public static void setup(Supreme sup) {
 
-    AbstractQuarry quarryCobblestone = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.STONE_QUARRY,
+    AbstractQuarry quarryCobblestone = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.STONE_QUARRY.asQuantity(1),
         SupremeQuarry.RECIPE_STONE_QUARRY).setOutput(getOutputQuarry(SupremeQuarry.STONE_QUARRY)).setCapacity(1000)
         .setEnergyConsumption(10);
     ItemUtil.addLoreQuarry(quarryCobblestone);
     quarryCobblestone.register(sup);
 
-    AbstractQuarry quarryCoal = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.COAL_QUARRY,
+    AbstractQuarry quarryCoal = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.COAL_QUARRY.asQuantity(1),
         SupremeQuarry.RECIPE_COAL_QUARRY).setOutput(getOutputQuarry(SupremeQuarry.COAL_QUARRY)).setCapacity(1000)
         .setEnergyConsumption(10);
     ItemUtil.addLoreQuarry(quarryCoal);
     quarryCoal.register(sup);
 
-    AbstractQuarry quarryIron = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.IRON_QUARRY,
+    AbstractQuarry quarryIron = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.IRON_QUARRY.asQuantity(1),
         SupremeQuarry.RECIPE_IRON_QUARRY).setOutput(getOutputQuarry(SupremeQuarry.IRON_QUARRY)).setCapacity(1000)
         .setEnergyConsumption(10);
     ItemUtil.addLoreQuarry(quarryIron);
     quarryIron.register(sup);
 
-    AbstractQuarry quarryGold = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.GOLD_QUARRY,
+    AbstractQuarry quarryGold = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.GOLD_QUARRY.asQuantity(1),
         SupremeQuarry.RECIPE_GOLD_QUARRY).setOutput(getOutputQuarry(SupremeQuarry.GOLD_QUARRY)).setCapacity(1000)
         .setEnergyConsumption(10);
     ItemUtil.addLoreQuarry(quarryGold);
     quarryGold.register(sup);
 
-    AbstractQuarry quarryDiamond = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.DIAMOND_QUARRY,
+    AbstractQuarry quarryDiamond = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.DIAMOND_QUARRY.asQuantity(1),
         SupremeQuarry.RECIPE_DIAMOND_QUARRY).setOutput(getOutputQuarry(SupremeQuarry.DIAMOND_QUARRY)).setCapacity(1000)
         .setEnergyConsumption(10);
     ItemUtil.addLoreQuarry(quarryDiamond);
     quarryDiamond.register(sup);
 
-    AbstractQuarry quarryThornium = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.THORNIUM_QUARRY,
+    AbstractQuarry quarryThornium = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY, SupremeQuarry.THORNIUM_QUARRY.asQuantity(1),
         SupremeQuarry.RECIPE_THORNIUM_QUARRY).setOutput(getOutputQuarry(SupremeQuarry.THORNIUM_QUARRY))
         .setCapacity(1000).setEnergyConsumption(10);
     ItemUtil.addLoreQuarry(quarryThornium);
     quarryThornium.register(sup);
 
     AbstractQuarry quarrySupremeNuggets = new AbstractQuarry(ItemGroups.MACHINES_CATEGORY,
-        SupremeQuarry.SUPREME_NUGGETS_QUARRY, SupremeQuarry.RECIPE_SUPREME_NUGGETS_QUARRY).setOutput(
+        SupremeQuarry.SUPREME_NUGGETS_QUARRY.asQuantity(1), SupremeQuarry.RECIPE_SUPREME_NUGGETS_QUARRY).setOutput(
         getOutputQuarry(SupremeQuarry.SUPREME_NUGGETS_QUARRY)).setCapacity(1000).setEnergyConsumption(10);
     ItemUtil.addLoreQuarry(quarrySupremeNuggets);
     quarrySupremeNuggets.register(sup);

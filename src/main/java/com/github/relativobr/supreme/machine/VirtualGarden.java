@@ -45,29 +45,29 @@ public class VirtualGarden extends SimpleItemWithLargeContainerMachine {
       Material.STRIPPED_WARPED_HYPHAE, "&bVirtual Garden", "", "&fThis machine allows you to",
       "&fcultivate some resources.", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
       LoreBuilder.speed(1), LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_VIRTUAL_GARDEN_MACHINE = new ItemStack[]{SupremeComponents.SYNTHETIC_RUBY,
-      new ItemStack(Material.STRIPPED_WARPED_HYPHAE), SupremeComponents.SYNTHETIC_RUBY,
-      SupremeComponents.RUSTLESS_MACHINE, SupremeComponents.PETRIFIER_MACHINE, SupremeComponents.RUSTLESS_MACHINE,
-      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_2_FARMER,
-      SupremeComponents.ADAMANTIUM_PLATE};
+  public static final ItemStack[] RECIPE_VIRTUAL_GARDEN_MACHINE = new ItemStack[]{SupremeComponents.SYNTHETIC_RUBY.asQuantity(1),
+      new ItemStack(Material.STRIPPED_WARPED_HYPHAE), SupremeComponents.SYNTHETIC_RUBY.asQuantity(1),
+      SupremeComponents.RUSTLESS_MACHINE.asQuantity(1), SupremeComponents.PETRIFIER_MACHINE.asQuantity(1), SupremeComponents.RUSTLESS_MACHINE.asQuantity(1),
+      SupremeComponents.ADAMANTIUM_PLATE.asQuantity(1), SlimefunItems.PROGRAMMABLE_ANDROID_2_FARMER.asQuantity(1),
+      SupremeComponents.ADAMANTIUM_PLATE.asQuantity(1)};
 
   public static final SlimefunItemStack VIRTUAL_GARDEN_MACHINE_II = new SupremeItemStack("SUPREME_VIRTUAL_GARDEN_II",
       Material.STRIPPED_WARPED_HYPHAE, "&bVirtual Garden II", "", "&fThis machine allows you to",
       "&fcultivate some resources.", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
       LoreBuilder.speed(5), LoreBuilder.powerBuffer(5000), LoreBuilder.powerPerSecond(100), "", "&3Supreme Machine");
   public static final ItemStack[] RECIPE_VIRTUAL_GARDEN_MACHINE_II = new ItemStack[]{
-      SupremeComponents.CONVEYANCE_MACHINE, SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CONVEYANCE_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, VirtualGarden.VIRTUAL_GARDEN_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
-      SupremeComponents.THORNERITE, SupremeCetrus.CETRUS_AQUA, SupremeComponents.THORNERITE};
+      SupremeComponents.CONVEYANCE_MACHINE.asQuantity(1), SupremeCetrus.CETRUS_LUMIUM.asQuantity(1), SupremeComponents.CONVEYANCE_MACHINE.asQuantity(1),
+      SupremeComponents.INDUCTOR_MACHINE.asQuantity(1), VirtualGarden.VIRTUAL_GARDEN_MACHINE.asQuantity(1), SupremeComponents.INDUCTOR_MACHINE.asQuantity(1),
+      SupremeComponents.THORNERITE.asQuantity(1), SupremeCetrus.CETRUS_AQUA.asQuantity(1), SupremeComponents.THORNERITE.asQuantity(1)};
 
   public static final SlimefunItemStack VIRTUAL_GARDEN_MACHINE_III = new SupremeItemStack("SUPREME_VIRTUAL_GARDEN_III",
       Material.STRIPPED_WARPED_HYPHAE, "&bVirtual Garden III", "", "&fThis machine allows you to",
       "&fcultivate some resources.", "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
       LoreBuilder.speed(15), LoreBuilder.powerBuffer(15000), LoreBuilder.powerPerSecond(300), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_VIRTUAL_GARDEN_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,
-      SupremeAttribute.getFortune(), SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
-      VirtualGarden.VIRTUAL_GARDEN_MACHINE_II, SupremeComponents.SUPREME, SupremeComponents.CRYSTALLIZER_MACHINE,
-      SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
+  public static final ItemStack[] RECIPE_VIRTUAL_GARDEN_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE.asQuantity(1),
+      SupremeAttribute.getFortune().asQuantity(1), SupremeComponents.THORNERITE.asQuantity(1), SupremeComponents.SUPREME.asQuantity(1),
+      VirtualGarden.VIRTUAL_GARDEN_MACHINE_II, SupremeComponents.SUPREME.asQuantity(1), SupremeComponents.CRYSTALLIZER_MACHINE.asQuantity(1),
+      SupremeCetrus.CETRUS_LUMIUM.asQuantity(1), SupremeComponents.CRYSTALLIZER_MACHINE.asQuantity(1)};
 
   public static Map<Block, MachineRecipe> processing = new HashMap<>();
   public static Map<Block, Integer> progress = new HashMap<>();
@@ -103,7 +103,7 @@ public class VirtualGarden extends SimpleItemWithLargeContainerMachine {
     VirtualGardenMachineRecipe.getAllRecipe()
         .stream().filter(Objects::nonNull)
         .forEach(recipe -> {
-      displayRecipes.add(new CustomItemStack(recipe.getFirstMaterialInput(), null, "&fRequires &bto cultivate"));
+      displayRecipes.add(CustomItemStack.create(recipe.getFirstMaterialInput(), null, "&fRequires &bto cultivate"));
       displayRecipes.add(new ItemStack(recipe.getFirstMaterialOutput()));
     });
     return displayRecipes;

@@ -10,23 +10,23 @@ public class SetupMagicalComponents {
 
   public static void setup(Supreme sup) {
 
-    registerMagicalFabricator(SupremeCetrus.CETRUS_LUMIUM, SupremeCetrus.RECIPE_CETRUS_LUMIUM);
+    registerMagicalFabricator(SupremeCetrus.CETRUS_LUMIUM.asQuantity(1), SupremeCetrus.RECIPE_CETRUS_LUMIUM);
 
-    registerMagicalFabricator(SupremeCetrus.CETRUS_LUX, SupremeCetrus.RECIPE_CETRUS_LUX);
+    registerMagicalFabricator(SupremeCetrus.CETRUS_LUX.asQuantity(1), SupremeCetrus.RECIPE_CETRUS_LUX);
 
-    registerMagicalFabricator(SupremeCetrus.CETRUS_VENTUS, SupremeCetrus.RECIPE_CETRUS_VENTUS);
+    registerMagicalFabricator(SupremeCetrus.CETRUS_VENTUS.asQuantity(1), SupremeCetrus.RECIPE_CETRUS_VENTUS);
 
-    registerMagicalFabricator(SupremeCetrus.CETRUS_AQUA, SupremeCetrus.RECIPE_CETRUS_AQUA);
+    registerMagicalFabricator(SupremeCetrus.CETRUS_AQUA.asQuantity(1), SupremeCetrus.RECIPE_CETRUS_AQUA);
 
-    registerMagicalFabricator(SupremeCetrus.CETRUS_IGNIS, SupremeCetrus.RECIPE_CETRUS_IGNIS);
+    registerMagicalFabricator(SupremeCetrus.CETRUS_IGNIS.asQuantity(1), SupremeCetrus.RECIPE_CETRUS_IGNIS);
 
-    registerMagicalFabricator(SupremeAttribute.getMagic(), SupremeAttribute.RECIPE_ATTRIBUTE_MAGIC);
+    registerMagicalFabricator(SupremeAttribute.getMagic().asQuantity(1), SupremeAttribute.RECIPE_ATTRIBUTE_MAGIC);
 
-    registerMagicalFabricator(SupremeAttribute.getBomb(), SupremeAttribute.RECIPE_ATTRIBUTE_BOMB);
+    registerMagicalFabricator(SupremeAttribute.getBomb().asQuantity(1), SupremeAttribute.RECIPE_ATTRIBUTE_BOMB);
 
-    registerMagicalFabricator(SupremeAttribute.getFortune(), SupremeAttribute.RECIPE_ATTRIBUTE_FORTUNE);
+    registerMagicalFabricator(SupremeAttribute.getFortune().asQuantity(1), SupremeAttribute.RECIPE_ATTRIBUTE_FORTUNE);
 
-    registerMagicalFabricator(SupremeAttribute.getImpetus(), SupremeAttribute.RECIPE_ATTRIBUTE_IMPETUS);
+    registerMagicalFabricator(SupremeAttribute.getImpetus().asQuantity(1), SupremeAttribute.RECIPE_ATTRIBUTE_IMPETUS);
 
   }
 }

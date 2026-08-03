@@ -51,9 +51,9 @@ public class CheckInventory extends SlimefunItem implements InventoryBlock {
       Material.REDSTONE_LAMP, "&bCheckInventory", "", "&fChecks if the nearby chest has the filter item",
       "&fall faces are being considered (find first)", "&fif found, this block will light up", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
       LoreBuilder.speed(1), UtilEnergy.energyPowerPerSecond(0), "", "&3Supreme Machine");
-  private static final ItemStack[] RECIPE_CHECK_INVENTORY = new ItemStack[]{SupremeComponents.ALLOY_AURUM,
-      new ItemStack(Material.REDSTONE_LAMP), SupremeComponents.ALLOY_AURUM, SupremeComponents.INDUCTIVE_MACHINE,
-      SupremeComponents.SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE, new ItemStack(Material.REDSTONE_BLOCK),
+  private static final ItemStack[] RECIPE_CHECK_INVENTORY = new ItemStack[]{SupremeComponents.ALLOY_AURUM.asQuantity(1),
+      new ItemStack(Material.REDSTONE_LAMP), SupremeComponents.ALLOY_AURUM.asQuantity(1), SupremeComponents.INDUCTIVE_MACHINE.asQuantity(1),
+      SupremeComponents.SYNTHETIC_RUBY.asQuantity(1), SupremeComponents.INDUCTIVE_MACHINE.asQuantity(1), new ItemStack(Material.REDSTONE_BLOCK),
       new ItemStack(Material.COMPARATOR), new ItemStack(Material.REDSTONE_BLOCK)};
 
   public static void setup(Supreme plugin) {
@@ -178,7 +178,7 @@ public class CheckInventory extends SlimefunItem implements InventoryBlock {
   }
 
   private void buildMenuBorder(BlockMenuPreset menu, int slot) {
-    menu.addItem(slot, new CustomItemStack(Material.WHITE_STAINED_GLASS_PANE, " "),
+    menu.addItem(slot, CustomItemStack.create(Material.WHITE_STAINED_GLASS_PANE, " "),
         ChestMenuUtils.getEmptyClickHandler());
     menu.addMenuClickHandler(slot, ChestMenuUtils.getEmptyClickHandler());
   }

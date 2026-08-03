@@ -50,10 +50,10 @@ public class MobCollector extends SimpleItemWithLargeContainerMachine {
       Material.RESPAWN_ANCHOR, "&bMob Collector", "", "&fThis machine allows you to collect ",
       "&fitems from nearby mobs. (4 block)", "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE),
       LoreBuilder.speed(1), LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_MOB_COLLECTOR_MACHINE = new ItemStack[]{SupremeComponents.RUSTLESS_MACHINE,
-      new ItemStack(Material.RESPAWN_ANCHOR), SupremeComponents.RUSTLESS_MACHINE, SupremeComponents.INDUCTIVE_MACHINE,
-      SupremeComponents.SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE, SupremeComponents.ADAMANTIUM_PLATE,
-      SlimefunItems.PROGRAMMABLE_ANDROID_3_BUTCHER, SupremeComponents.ADAMANTIUM_PLATE};
+  public static final ItemStack[] RECIPE_MOB_COLLECTOR_MACHINE = new ItemStack[]{SupremeComponents.RUSTLESS_MACHINE.asQuantity(1),
+      new ItemStack(Material.RESPAWN_ANCHOR), SupremeComponents.RUSTLESS_MACHINE.asQuantity(1), SupremeComponents.INDUCTIVE_MACHINE.asQuantity(1),
+      SupremeComponents.SYNTHETIC_RUBY.asQuantity(1), SupremeComponents.INDUCTIVE_MACHINE.asQuantity(1), SupremeComponents.ADAMANTIUM_PLATE.asQuantity(1),
+      SlimefunItems.PROGRAMMABLE_ANDROID_3_BUTCHER.asQuantity(1), SupremeComponents.ADAMANTIUM_PLATE.asQuantity(1)};
 
   public static final SlimefunItemStack MOB_COLLECTOR_MACHINE_II = new SupremeItemStack(
       "SUPREME_MOB_COLLECTOR_MACHINE_II", Material.RESPAWN_ANCHOR, "&bMob Collector II", "",
@@ -61,19 +61,19 @@ public class MobCollector extends SimpleItemWithLargeContainerMachine {
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(5),
       LoreBuilder.powerBuffer(5000), LoreBuilder.powerPerSecond(100), "", "&3Supreme Machine");
   public static final ItemStack[] RECIPE_MOB_COLLECTOR_MACHINE_II = new ItemStack[]{
-      SupremeComponents.CONVEYANCE_MACHINE, SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CONVEYANCE_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, MobCollector.MOB_COLLECTOR_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
-      SupremeComponents.THORNERITE, SupremeCetrus.CETRUS_IGNIS, SupremeComponents.THORNERITE};
+      SupremeComponents.CONVEYANCE_MACHINE.asQuantity(1), SupremeCetrus.CETRUS_LUMIUM.asQuantity(1), SupremeComponents.CONVEYANCE_MACHINE.asQuantity(1),
+      SupremeComponents.INDUCTOR_MACHINE.asQuantity(1), MobCollector.MOB_COLLECTOR_MACHINE.asQuantity(1), SupremeComponents.INDUCTOR_MACHINE.asQuantity(1),
+      SupremeComponents.THORNERITE.asQuantity(1), SupremeCetrus.CETRUS_IGNIS.asQuantity(1), SupremeComponents.THORNERITE.asQuantity(1)};
 
   public static final SlimefunItemStack MOB_COLLECTOR_MACHINE_III = new SupremeItemStack(
       "SUPREME_MOB_COLLECTOR_MACHINE_III", Material.RESPAWN_ANCHOR, "&bMob Collector III", "",
       "&fThis machine allows you to collect", "&f items from nearby mobs. (16 block)", "",
       LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE), LoreBuilder.speed(15),
       LoreBuilder.powerBuffer(15000), LoreBuilder.powerPerSecond(300), "", "&3Supreme Machine");
-  public static final ItemStack[] RECIPE_MOB_COLLECTOR_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE,
-      SupremeAttribute.getBomb(), SupremeComponents.THORNERITE, SupremeComponents.SUPREME,
-      MobCollector.MOB_COLLECTOR_MACHINE_II, SupremeComponents.SUPREME, SupremeComponents.CRYSTALLIZER_MACHINE,
-      SupremeCetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
+  public static final ItemStack[] RECIPE_MOB_COLLECTOR_MACHINE_III = new ItemStack[]{SupremeComponents.THORNERITE.asQuantity(1),
+      SupremeAttribute.getBomb().asQuantity(1), SupremeComponents.THORNERITE.asQuantity(1), SupremeComponents.SUPREME.asQuantity(1),
+      MobCollector.MOB_COLLECTOR_MACHINE_II.asQuantity(1), SupremeComponents.SUPREME.asQuantity(1), SupremeComponents.CRYSTALLIZER_MACHINE.asQuantity(1),
+      SupremeCetrus.CETRUS_LUMIUM.asQuantity(1), SupremeComponents.CRYSTALLIZER_MACHINE.asQuantity(1)};
 
   public static Map<Block, MachineRecipe> processing = new HashMap<>();
   public static Map<Block, Integer> progress = new HashMap<>();
@@ -105,7 +105,7 @@ public class MobCollector extends SimpleItemWithLargeContainerMachine {
             (n) -> n.getType() == EntityType.GLOW_SQUID));
     this.addProduce(
         new MobCollectorMachineRecipe(new ItemStack(Material.GLASS_BOTTLE, this.getSpeed()),
-            new SlimefunItemStack(SlimefunItems.FILLED_FLASK_OF_KNOWLEDGE, this.getSpeed()),
+            SlimefunItems.FILLED_FLASK_OF_KNOWLEDGE.asQuantity(this.getSpeed()),
             (n) -> n.getType() == EntityType.WITHER));
     this.addProduce(
         new MobCollectorMachineRecipe(new ItemStack(Material.GLASS_BOTTLE, this.getSpeed()),
@@ -182,11 +182,11 @@ public class MobCollector extends SimpleItemWithLargeContainerMachine {
             new ItemStack(Material.COAL, this.getSpeed()),
             (n) -> n.getType() == EntityType.WITHER_SKELETON));
     this.addProduce(new MobCollectorMachineRecipe(new ItemStack(Material.SHEARS),
-        new SlimefunItemStack(SlimefunItems.COMPRESSED_CARBON, this.getSpeed()),
+        SlimefunItems.COMPRESSED_CARBON.asQuantity(this.getSpeed()),
         (n) -> n.getType() == EntityType.WITHER));
     if (!customBc) {
       this.addProduce(new MobCollectorMachineRecipe(new ItemStack(Material.SHEARS),
-          new SlimefunItemStack(SlimefunItems.BASIC_CIRCUIT_BOARD, this.getSpeed()),
+          SlimefunItems.BASIC_CIRCUIT_BOARD.asQuantity(this.getSpeed()),
           (n) -> n.getType() == EntityType.IRON_GOLEM));
     }
     this.addProduce(new MobCollectorMachineRecipe(new ItemStack(Material.IRON_SWORD),
@@ -267,7 +267,7 @@ public class MobCollector extends SimpleItemWithLargeContainerMachine {
         (n) -> n.getType() == EntityType.WITCH));
     if (!customBc) {
       this.addProduce(new MobCollectorMachineRecipe(new ItemStack(Material.GOLD_INGOT),
-              new SlimefunItemStack(SlimefunItems.STRANGE_NETHER_GOO, this.getSpeed()),
+              SlimefunItems.STRANGE_NETHER_GOO.asQuantity(this.getSpeed()),
               (n) -> n.getType() == EntityType.PIGLIN));
     }
   }

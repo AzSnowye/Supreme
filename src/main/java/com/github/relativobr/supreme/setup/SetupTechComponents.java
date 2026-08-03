@@ -22,29 +22,29 @@ public class SetupTechComponents {
 
     if (supremeOptions.isEnableTech()) {
 
-      registerEnhancedCraft(SupremeComponents.CENTER_CARD_SIMPLE, SupremeComponents.RECIPE_CENTER_CARD_SIMPLE);
-      registerEnhancedCraft(SupremeComponents.CENTER_CARD_ADVANCED, SupremeComponents.RECIPE_CENTER_CARD_ADVANCED);
-      registerEnhancedCraft(SupremeComponents.CENTER_CARD_ULTIMATE, SupremeComponents.RECIPE_CENTER_CARD_ULTIMATE);
+      registerEnhancedCraft(SupremeComponents.CENTER_CARD_SIMPLE.asQuantity(1), SupremeComponents.RECIPE_CENTER_CARD_SIMPLE);
+      registerEnhancedCraft(SupremeComponents.CENTER_CARD_ADVANCED.asQuantity(1), SupremeComponents.RECIPE_CENTER_CARD_ADVANCED);
+      registerEnhancedCraft(SupremeComponents.CENTER_CARD_ULTIMATE.asQuantity(1), SupremeComponents.RECIPE_CENTER_CARD_ULTIMATE);
 
-      registerGrindStone(SupremeComponents.DUST_NETHERITE, SupremeComponents.RECIPE_DUST_NETHERITE, 4);
-      registerGrindStone(SupremeComponents.DUST_GLOW_INK, SupremeComponents.RECIPE_DUST_GLOW_INK, 4);
-      registerGrindStone(SupremeComponents.DUST_AMETHYST, SupremeComponents.RECIPE_DUST_AMETHYST, 4);
+      registerGrindStone(SupremeComponents.DUST_NETHERITE.asQuantity(1), SupremeComponents.RECIPE_DUST_NETHERITE, 4);
+      registerGrindStone(SupremeComponents.DUST_GLOW_INK.asQuantity(1), SupremeComponents.RECIPE_DUST_GLOW_INK, 4);
+      registerGrindStone(SupremeComponents.DUST_AMETHYST.asQuantity(1), SupremeComponents.RECIPE_DUST_AMETHYST, 4);
 
       registerTechMutation(SupremeComponents.GENE_BERSERK);
       registerTechMutation(SupremeComponents.GENE_LUCK);
       registerTechMutation(SupremeComponents.GENE_INTELLIGENCE);
 
-      registerEnhancedCraft(SupremeComponents.EMPTY_MOBTECH, SupremeComponents.RECIPE_EMPTY_MOBTECH);
+      registerEnhancedCraft(SupremeComponents.EMPTY_MOBTECH.asQuantity(1), SupremeComponents.RECIPE_EMPTY_MOBTECH);
 
-      TechMutation.addRecipeTechMutation(SupremeComponents.DUST_NETHERITE, SlimefunItems.FIRE_RUNE,
+      TechMutation.addRecipeTechMutation(SupremeComponents.DUST_NETHERITE.asQuantity(1), SlimefunItems.FIRE_RUNE.asQuantity(1),
           SupremeComponents.GENE_BERSERK);
-      TechMutation.addRecipeTechMutation(SupremeComponents.DUST_GLOW_INK, SlimefunItems.LIGHTNING_RUNE,
+      TechMutation.addRecipeTechMutation(SupremeComponents.DUST_GLOW_INK.asQuantity(1), SlimefunItems.LIGHTNING_RUNE.asQuantity(1),
           SupremeComponents.GENE_LUCK);
-      TechMutation.addRecipeTechMutation(SupremeComponents.DUST_AMETHYST, SlimefunItems.RAINBOW_RUNE,
+      TechMutation.addRecipeTechMutation(SupremeComponents.DUST_AMETHYST.asQuantity(1), SlimefunItems.RAINBOW_RUNE.asQuantity(1),
           SupremeComponents.GENE_INTELLIGENCE);
-      TechMutation.addRecipeTechMutation(SlimefunItems.URANIUM, SlimefunItems.URANIUM, SlimefunItems.NEPTUNIUM);
-      TechMutation.addRecipeTechMutation(SlimefunItems.NEPTUNIUM, SlimefunItems.NEPTUNIUM, SlimefunItems.PLUTONIUM);
-      TechMutation.addRecipeTechMutation(SlimefunItems.PLUTONIUM, SlimefunItems.URANIUM, SlimefunItems.BOOSTED_URANIUM);
+      TechMutation.addRecipeTechMutation(SlimefunItems.URANIUM.asQuantity(1), SlimefunItems.URANIUM.asQuantity(1), SlimefunItems.NEPTUNIUM);
+      TechMutation.addRecipeTechMutation(SlimefunItems.NEPTUNIUM.asQuantity(1), SlimefunItems.NEPTUNIUM.asQuantity(1), SlimefunItems.PLUTONIUM);
+      TechMutation.addRecipeTechMutation(SlimefunItems.PLUTONIUM.asQuantity(1), SlimefunItems.URANIUM.asQuantity(1), SlimefunItems.BOOSTED_URANIUM);
 
       if (supremeOptions.isMobTechEnableBee()) {
         BeeTech.setup(sup);

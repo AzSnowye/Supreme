@@ -172,22 +172,22 @@ public class GenericMachine extends AContainer implements NotHopperable, RecipeD
   @Override
   protected void constructMenu(BlockMenuPreset preset) {
     for (int i : getBorderSlots()) {
-      preset.addItem(i, new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "),
+      preset.addItem(i, CustomItemStack.create(Material.GRAY_STAINED_GLASS_PANE, " "),
           ChestMenuUtils.getEmptyClickHandler());
     }
 
     for (int i : getInputBorderSlots()) {
-      preset.addItem(i, new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE, " "),
+      preset.addItem(i, CustomItemStack.create(Material.CYAN_STAINED_GLASS_PANE, " "),
           ChestMenuUtils.getEmptyClickHandler());
     }
 
     for (int i : getOutputBorderSlots()) {
-      preset.addItem(i, new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE, " "),
+      preset.addItem(i, CustomItemStack.create(Material.ORANGE_STAINED_GLASS_PANE, " "),
           ChestMenuUtils.getEmptyClickHandler());
     }
 
     preset.addItem(getStatusSlot(),
-        new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " "),
+        CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " "),
         ChestMenuUtils.getEmptyClickHandler());
 
     for (int i : getOutputSlots()) {
@@ -271,7 +271,7 @@ public class GenericMachine extends AContainer implements NotHopperable, RecipeD
   public List<ItemStack> getDisplayRecipes() {
     List<ItemStack> displayRecipes = new ArrayList();
     machineRecipes.forEach(recipe -> {
-      displayRecipes.add(new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE, " "));
+      displayRecipes.add(CustomItemStack.create(Material.GRAY_STAINED_GLASS_PANE, " "));
       displayRecipes.add(recipe.getFirstItemOutput());
     });
     return displayRecipes;
@@ -472,10 +472,10 @@ public class GenericMachine extends AContainer implements NotHopperable, RecipeD
   }
 
   private ItemStack getDisplayOrInfo(ItemStack itemStack, String name) {
-    return new CustomItemStack(itemStack != null ? itemStack : new ItemStack(Material.BLACK_STAINED_GLASS_PANE), name);
+    return CustomItemStack.create(itemStack != null ? itemStack : new ItemStack(Material.BLACK_STAINED_GLASS_PANE), name);
   }
 
   private ItemStack getDisplayOrWarn(ItemStack itemStack, String name) {
-    return new CustomItemStack(itemStack != null ? itemStack : new ItemStack(Material.RED_STAINED_GLASS_PANE), name);
+    return CustomItemStack.create(itemStack != null ? itemStack : new ItemStack(Material.RED_STAINED_GLASS_PANE), name);
   }
 }

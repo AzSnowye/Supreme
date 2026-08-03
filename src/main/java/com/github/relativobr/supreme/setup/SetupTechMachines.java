@@ -40,12 +40,12 @@ public class SetupTechMachines {
 
       }
 
-      new TechMutation(TechMutation.TECH_MUTATION_I,
+      new TechMutation(TechMutation.TECH_MUTATION_I.asQuantity(1),
           TechMutation.RECIPE_TECH_MUTATION_I).setUpgradeLuck(1).setTimeProcess(60)
           .setMachineIdentifier(TechMutation.TECH_MUTATION_I.getItemId()).setCapacity(500)
           .setEnergyConsumption(500).register(sup);
 
-      new TechMutation(TechMutation.TECH_MUTATION_II,
+      new TechMutation(TechMutation.TECH_MUTATION_II.asQuantity(1),
           TechMutation.RECIPE_TECH_MUTATION_II).setUpgradeLuck(2).setTimeProcess(60)
           .setMachineIdentifier(TechMutation.TECH_MUTATION_II.getItemId()).setCapacity(500)
           .setEnergyConsumption(500).register(sup);
@@ -55,7 +55,7 @@ public class SetupTechMachines {
           .setMachineIdentifier(TechMutation.TECH_MUTATION_III.getItemId()).setCapacity(500)
           .setEnergyConsumption(500).register(sup);
 
-      new TechRobotic(TechRobotic.TECH_ROBOTIC, TechRobotic.RECIPE_TECH_ROBOTIC).setAmountUpgrade(
+      new TechRobotic(TechRobotic.TECH_ROBOTIC.asQuantity(1), TechRobotic.RECIPE_TECH_ROBOTIC).setAmountUpgrade(
               64).setTimeProcess(60).setMachineIdentifier(TechRobotic.TECH_ROBOTIC.getItemId())
           .setCapacity(500).setEnergyConsumption(500).register(sup);
 

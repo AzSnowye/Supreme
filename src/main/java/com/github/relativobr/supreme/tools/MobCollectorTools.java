@@ -37,20 +37,20 @@ public class MobCollectorTools extends SlimefunItem implements Rechargeable, Not
   public static final SlimefunItemStack MOB_COLLECTOR_I = new SupremeItemStack("SUPREME_MOB_COLLECTOR_TOOL_I",
       Material.IRON_SHOVEL, false,
       LoreBuilder.power(50, " per use"), LoreBuilder.powerCharged(0, 500));
-  public static final ItemStack[] RECIPE_MOB_COLLECTOR_I = new ItemStack[]{null, SupremeComponents.SYNTHETIC_RUBY, null,
-      null, WeaponsBasic.AURUM_SWORD, null, null, SlimefunItems.MEDIUM_CAPACITOR, null};
+  public static final ItemStack[] RECIPE_MOB_COLLECTOR_I = new ItemStack[]{null, SupremeComponents.SYNTHETIC_RUBY.asQuantity(1), null,
+      null, WeaponsBasic.AURUM_SWORD, null, null, SlimefunItems.MEDIUM_CAPACITOR.asQuantity(1), null};
 
   public static final SlimefunItemStack MOB_COLLECTOR_II = new SupremeItemStack("SUPREME_MOB_COLLECTOR_TOOL_II",
       Material.DIAMOND_SHOVEL, false,
       LoreBuilder.power(50, " per use"), LoreBuilder.powerCharged(0, 5000));
-  public static final ItemStack[] RECIPE_MOB_COLLECTOR_II = new ItemStack[]{null, SupremeCore.CORE_OF_LIFE, null, null,
-      MobCollectorTools.MOB_COLLECTOR_I, null, null, SupremeCetrus.CETRUS_VENTUS, null};
+  public static final ItemStack[] RECIPE_MOB_COLLECTOR_II = new ItemStack[]{null, SupremeCore.CORE_OF_LIFE.asQuantity(1), null, null,
+      MobCollectorTools.MOB_COLLECTOR_I.asQuantity(1), null, null, SupremeCetrus.CETRUS_VENTUS.asQuantity(1), null};
 
   public static final SlimefunItemStack MOB_COLLECTOR_III = new SupremeItemStack("SUPREME_MOB_COLLECTOR_TOOL_III",
       Material.NETHERITE_SHOVEL, false,
       LoreBuilder.power(50, " per use"), LoreBuilder.powerCharged(0, 50000));
-  public static final ItemStack[] RECIPE_MOB_COLLECTOR_III = new ItemStack[]{null, SupremeAttribute.getBomb(), null,
-      null, MobCollectorTools.MOB_COLLECTOR_II, null, null, SupremeCetrus.CETRUS_LUMIUM, null};
+  public static final ItemStack[] RECIPE_MOB_COLLECTOR_III = new ItemStack[]{null, SupremeAttribute.getBomb().asQuantity(1), null,
+      null, MobCollectorTools.MOB_COLLECTOR_II.asQuantity(1), null, null, SupremeCetrus.CETRUS_LUMIUM.asQuantity(1), null};
   int charge;
   int maxCharge;
   public MobCollectorTools(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
@@ -60,15 +60,15 @@ public class MobCollectorTools extends SlimefunItem implements Rechargeable, Not
 
   public static void setup(Supreme plugin) {
 
-    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_I,
+    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_I.asQuantity(1),
         RecipeType.ENHANCED_CRAFTING_TABLE, MobCollectorTools.RECIPE_MOB_COLLECTOR_I).setCharge(50).setMaxCharge(500)
         .register(plugin);
 
-    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_II,
+    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_II.asQuantity(1),
         RecipeType.ENHANCED_CRAFTING_TABLE, MobCollectorTools.RECIPE_MOB_COLLECTOR_II).setCharge(50).setMaxCharge(5000)
         .register(plugin);
 
-    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_III,
+    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_III.asQuantity(1),
         RecipeType.ENHANCED_CRAFTING_TABLE, MobCollectorTools.RECIPE_MOB_COLLECTOR_III).setCharge(50).setMaxCharge(5000)
         .register(plugin);
 

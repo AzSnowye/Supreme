@@ -52,8 +52,7 @@ public class RegisterItem {
   @ParametersAreNonnullByDefault
   public static void registerGrindStone(ItemGroup itemGroup, SlimefunItemStack itemStack, ItemStack[] recipe,
       int amount) {
-    new SlimefunItem(itemGroup, itemStack, RecipeType.GRIND_STONE, recipe,
-        new SlimefunItemStack(itemStack, amount)).register(Supreme.inst());
+    new SlimefunItem(itemGroup, itemStack, RecipeType.GRIND_STONE, recipe, itemStack.asQuantity(amount)).register(Supreme.inst());
   }
 
   @ParametersAreNonnullByDefault
@@ -80,7 +79,7 @@ public class RegisterItem {
   @ParametersAreNonnullByDefault
   public static void registerTechMutation(SlimefunItemStack itemStack) {
     new UnplaceableBlock(ItemGroups.COMPONENTS_CATEGORY, itemStack, RecipeType.NULL,
-        new ItemStack[]{TechMutation.TECH_MUTATION_I}).register(Supreme.inst());
+        new ItemStack[]{TechMutation.TECH_MUTATION_I.asQuantity(1)}).register(Supreme.inst());
   }
 
 }
