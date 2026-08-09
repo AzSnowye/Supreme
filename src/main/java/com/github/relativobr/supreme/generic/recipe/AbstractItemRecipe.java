@@ -87,6 +87,40 @@ public class AbstractItemRecipe {
     return getMaterialOutput(1);
   }
 
+  public AbstractItemRecipe(@Nonnull io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack input, @Nonnull io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack output) {
+    this.input = new ItemStack[]{input.item()};
+    this.output = new ItemStack[]{output.item()};
+  }
+
+  public AbstractItemRecipe(@Nonnull io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack input, @Nonnull ItemStack output) {
+    this.input = new ItemStack[]{input.item()};
+    this.output = new ItemStack[]{output};
+  }
+
+  public AbstractItemRecipe(@Nonnull ItemStack input, @Nonnull io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack output) {
+    this.input = new ItemStack[]{input};
+    this.output = new ItemStack[]{output.item()};
+  }
+
+  public AbstractItemRecipe(@Nonnull ItemStack[] input, @Nonnull io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack output) {
+    this.input = input;
+    this.output = new ItemStack[]{output.item()};
+  }
+
+  public AbstractItemRecipe(@Nonnull io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack[] input, @Nonnull io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack output) {
+    ItemStack[] array = new ItemStack[input.length];
+    for (int i = 0; i < input.length; i++) {
+      array[i] = input[i].item();
+    }
+    this.input = array;
+    this.output = new ItemStack[]{output.item()};
+  }
+
+  public AbstractItemRecipe(@Nonnull io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack input, @Nonnull ItemStack[] output) {
+    this.input = new ItemStack[]{input.item()};
+    this.output = output;
+  }
+
   public AbstractItemRecipe(@Nonnull ItemStack input, @Nonnull ItemStack output) {
     this.input = new ItemStack[]{input};
     this.output = new ItemStack[]{output};
