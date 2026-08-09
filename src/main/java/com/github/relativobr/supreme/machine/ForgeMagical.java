@@ -62,64 +62,64 @@ public class ForgeMagical extends SimpleItemWithLargeContainerMachine {
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_NETHER_WART = new AbstractItemRecipe(
       new ItemStack(Material.WHEAT, 32), new ItemStack(Material.NETHER_WART, 16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_MAGICLUMP_1 = new AbstractItemRecipe(
-      new ItemStack(Material.NETHER_WART, 32), new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_1, 32));
+      new ItemStack(Material.NETHER_WART, 32), SlimefunItems.MAGIC_LUMP_1.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_MAGICLUMP_2 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_1, 32), new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_2, 8));
+      SlimefunItems.MAGIC_LUMP_1.asQuantity(32), SlimefunItems.MAGIC_LUMP_2.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_MAGICLUMP_3 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_2, 32), new SlimefunItemStack(SlimefunItems.MAGIC_LUMP_3, 8));
+      SlimefunItems.MAGIC_LUMP_2.asQuantity(32), SlimefunItems.MAGIC_LUMP_3.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ENDER_EYE = new AbstractItemRecipe(
       new ItemStack(Material.ENDER_PEARL, 16), new ItemStack(Material.ENDER_EYE, 8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ENDERLUMP_1 = new AbstractItemRecipe(
-      new ItemStack(Material.ENDER_EYE, 32), new SlimefunItemStack(SlimefunItems.ENDER_LUMP_1, 32));
+      new ItemStack(Material.ENDER_EYE, 32), SlimefunItems.ENDER_LUMP_1.asQuantity(32));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ENDERLUMP_2 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.ENDER_LUMP_1, 32), new SlimefunItemStack(SlimefunItems.ENDER_LUMP_2, 8));
+      SlimefunItems.ENDER_LUMP_1.asQuantity(32), SlimefunItems.ENDER_LUMP_2.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ENDERLUMP_3 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.ENDER_LUMP_2, 32), new SlimefunItemStack(SlimefunItems.ENDER_LUMP_3, 8));
+      SlimefunItems.ENDER_LUMP_2.asQuantity(32), SlimefunItems.ENDER_LUMP_3.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_SYNTHETIC_SAPPHIRE = new AbstractItemRecipe(
-      new ItemStack(Material.LAPIS_LAZULI, 32), new SlimefunItemStack(SlimefunItems.SYNTHETIC_SAPPHIRE, 8));
+      new ItemStack(Material.LAPIS_LAZULI, 32), SlimefunItems.SYNTHETIC_SAPPHIRE.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_SYNTHETIC_EMERALD = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.SYNTHETIC_SAPPHIRE, 32),
-      new SlimefunItemStack(SlimefunItems.SYNTHETIC_EMERALD, 16));
+      SlimefunItems.SYNTHETIC_SAPPHIRE.asQuantity(32),
+      SlimefunItems.SYNTHETIC_EMERALD.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_CARBON = new AbstractItemRecipe(
-      new ItemStack(Material.COAL, 32), new SlimefunItemStack(SlimefunItems.CARBON, 8));
+      new ItemStack(Material.COAL, 32), SlimefunItems.CARBON.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_COMPRESSED_CARBON = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.CARBON, 32), new SlimefunItemStack(SlimefunItems.COMPRESSED_CARBON, 8));
+      SlimefunItems.CARBON.asQuantity(32), SlimefunItems.COMPRESSED_CARBON.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_CARBON_CHUNK = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.COMPRESSED_CARBON, 32), new SlimefunItemStack(SlimefunItems.CARBON_CHUNK, 4));
+      SlimefunItems.COMPRESSED_CARBON.asQuantity(32), SlimefunItems.CARBON_CHUNK.asQuantity(4));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_SYNTHETIC_DIAMOND = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.CARBON_CHUNK, 16),
-      new SlimefunItemStack(SlimefunItems.SYNTHETIC_DIAMOND, 16));
+      SlimefunItems.CARBON_CHUNK.asQuantity(16),
+      SlimefunItems.SYNTHETIC_DIAMOND.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_CARBONADO = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.SYNTHETIC_DIAMOND, 16), new SlimefunItemStack(SlimefunItems.CARBONADO, 8));
+      SlimefunItems.SYNTHETIC_DIAMOND.asQuantity(16), SlimefunItems.CARBONADO.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_SOLAR_PANEL = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.FERROSILICON, 32), new SlimefunItemStack(SlimefunItems.SOLAR_PANEL, 16));
+      SlimefunItems.FERROSILICON.asQuantity(32), SlimefunItems.SOLAR_PANEL.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_MAGNET = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.COBALT_INGOT, 32), new SlimefunItemStack(SlimefunItems.MAGNET, 16));
+      SlimefunItems.COBALT_INGOT.asQuantity(32), SlimefunItems.MAGNET.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ELECTRO_MAGNET = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.MAGNET, 32), new SlimefunItemStack(SlimefunItems.ELECTRO_MAGNET, 16));
+      SlimefunItems.MAGNET.asQuantity(32), SlimefunItems.ELECTRO_MAGNET.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_ELECTRIC_MOTOR = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.ELECTRO_MAGNET, 32), new SlimefunItemStack(SlimefunItems.ELECTRIC_MOTOR, 16));
+      SlimefunItems.ELECTRO_MAGNET.asQuantity(32), SlimefunItems.ELECTRIC_MOTOR.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_HEATING_COIL = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.ELECTRIC_MOTOR, 32), new SlimefunItemStack(SlimefunItems.HEATING_COIL, 16));
+      SlimefunItems.ELECTRIC_MOTOR.asQuantity(32), SlimefunItems.HEATING_COIL.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_TINY_URANIUM = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.CRUSHED_ORE, 32), new SlimefunItemStack(SlimefunItems.TINY_URANIUM, 8));
+      SlimefunItems.CRUSHED_ORE.asQuantity(32), SlimefunItems.TINY_URANIUM.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_SMALL_URANIUM = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.TINY_URANIUM, 32), new SlimefunItemStack(SlimefunItems.SMALL_URANIUM, 8));
+      SlimefunItems.TINY_URANIUM.asQuantity(32), SlimefunItems.SMALL_URANIUM.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_URANIUM = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.SMALL_URANIUM, 32), new SlimefunItemStack(SlimefunItems.URANIUM, 8));
+      SlimefunItems.SMALL_URANIUM.asQuantity(32), SlimefunItems.URANIUM.asQuantity(8));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_BLISTERING_INGOT = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.URANIUM, 32), new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT, 16));
+      SlimefunItems.URANIUM.asQuantity(32), SlimefunItems.BLISTERING_INGOT.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_BLISTERING_INGOT_2 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT, 32),
-      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_2, 16));
+      SlimefunItems.BLISTERING_INGOT.asQuantity(32),
+      SlimefunItems.BLISTERING_INGOT_2.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_BLISTERING_INGOT_3 = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_2, 32),
-      new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_3, 16));
+      SlimefunItems.BLISTERING_INGOT_2.asQuantity(32),
+      SlimefunItems.BLISTERING_INGOT_3.asQuantity(16));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_STEEL_PLATE = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.STEEL_INGOT, 32), new SlimefunItemStack(SlimefunItems.STEEL_PLATE, 4));
+      SlimefunItems.STEEL_INGOT.asQuantity(32), SlimefunItems.STEEL_PLATE.asQuantity(4));
   public static final AbstractItemRecipe RECIPE_FORGE_MAGICAL_REINFORCED_PLATE = new AbstractItemRecipe(
-      new SlimefunItemStack(SlimefunItems.REINFORCED_ALLOY_INGOT, 32),
-      new SlimefunItemStack(SlimefunItems.REINFORCED_PLATE, 4));
+      SlimefunItems.REINFORCED_ALLOY_INGOT.asQuantity(32),
+      SlimefunItems.REINFORCED_PLATE.asQuantity(4));
 
   public ForgeMagical(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
     super(category, item, recipeType, recipe);

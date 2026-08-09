@@ -60,15 +60,15 @@ public class MobCollectorTools extends SlimefunItem implements Rechargeable, Not
 
   public static void setup(Supreme plugin) {
 
-    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_I,
+    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_I.asQuantity(1),
         RecipeType.ENHANCED_CRAFTING_TABLE, MobCollectorTools.RECIPE_MOB_COLLECTOR_I).setCharge(50).setMaxCharge(500)
         .register(plugin);
 
-    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_II,
+    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_II.asQuantity(1),
         RecipeType.ENHANCED_CRAFTING_TABLE, MobCollectorTools.RECIPE_MOB_COLLECTOR_II).setCharge(50).setMaxCharge(5000)
         .register(plugin);
 
-    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_III,
+    new MobCollectorTools(ItemGroups.TOOLS_CATEGORY, MobCollectorTools.MOB_COLLECTOR_III.asQuantity(1),
         RecipeType.ENHANCED_CRAFTING_TABLE, MobCollectorTools.RECIPE_MOB_COLLECTOR_III).setCharge(50).setMaxCharge(5000)
         .register(plugin);
 

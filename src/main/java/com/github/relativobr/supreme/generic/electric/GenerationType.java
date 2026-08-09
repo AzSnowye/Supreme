@@ -2,14 +2,12 @@ package com.github.relativobr.supreme.generic.electric;
 
 import javax.annotation.Nonnull;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 
-@AllArgsConstructor
 public enum GenerationType {
 
     SKY("Sky") {
@@ -100,6 +98,10 @@ public enum GenerationType {
 
     @Getter
     private final String toString;
+
+    GenerationType(String toString) {
+        this.toString = toString;
+    }
 
     protected abstract int generate(@Nonnull World world, @Nonnull Block block, int def);
 

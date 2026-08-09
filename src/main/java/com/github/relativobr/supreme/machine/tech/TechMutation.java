@@ -88,7 +88,7 @@ public class TechMutation extends SimpleItemContainerMachine implements Radioact
   @ParametersAreNonnullByDefault
   public static void addRecipeTechMutation(SlimefunItemStack recipe1, SlimefunItemStack recipe2, int chance,
       SlimefunItemStack item) {
-    recipes.add(new MobTechMutationGeneric(recipe1, recipe2, chance, item));
+    recipes.add(new MobTechMutationGeneric(recipe1.asQuantity(1), recipe2.asQuantity(1), chance, item.asQuantity(1)));
   }
 
   @ParametersAreNonnullByDefault

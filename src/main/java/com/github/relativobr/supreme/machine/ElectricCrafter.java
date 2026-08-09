@@ -80,9 +80,9 @@ public class ElectricCrafter extends GenericMachine {
           new ItemStack(Material.OAK_PLANKS), new ItemStack(Material.OAK_PLANKS), new ItemStack(Material.OAK_SLAB),
           new ItemStack(Material.OAK_PLANKS)}, new ItemStack(Material.BARREL, 1));
   public static final AbstractItemRecipe RECIPE_SYNTHETIC_AMETHYST = new AbstractItemRecipe(
-      SupremeComponents.RECIPE_SYNTHETIC_AMETHYST, SupremeComponents.SYNTHETIC_AMETHYST);
+      SupremeComponents.RECIPE_SYNTHETIC_AMETHYST, SupremeComponents.SYNTHETIC_AMETHYST.asQuantity(1));
   public static final AbstractItemRecipe RECIPE_SYNTHETIC_RUBY = new AbstractItemRecipe(
-      SupremeComponents.RECIPE_SYNTHETIC_RUBY, SupremeComponents.SYNTHETIC_RUBY);
+      SupremeComponents.RECIPE_SYNTHETIC_RUBY, SupremeComponents.SYNTHETIC_RUBY.asQuantity(1));
 
   public ElectricCrafter(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
     super(category, item, recipeType, recipe);
